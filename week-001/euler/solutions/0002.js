@@ -15,7 +15,26 @@
  */
 
 module.exports = function(){
-	var sum = 0;
+	var sum = 2;
+	var first = 1;
+	var second = 2;
+	var counter = 3;
+	while (counter<4000001) {
+		if ((first+second) % 2 === 0){
+			sum+=counter;
+			first=second;
+			second=counter;
+			counter=first+second;
+			console.log(sum);
+		} else {
+			first=second;
+			second=counter;
+			counter=first+second;
+		}
+
+	}
+
 
 	return sum;
+	console.log(sum);
 };
